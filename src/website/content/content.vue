@@ -1,12 +1,33 @@
 <template>
     <div class="content-wrapper">
-        <div class="sidebar"></div>
+        <div class="sidebar">
+            <div class="h1" v-for="h1 in nav">
+                <span>{{ h1.label }}</span>
+                <div class="h2" v-for="h2 in h1.child" style="padding-left: 10px">
+                    <span>{{ h2.label }}</span>
+                    <div class="h3" v-for="h3 in h2.child" style="padding-left: 10px">
+                        <span>{{ h3.label}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="detail"></div>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    import { NAV_METADATA } from '../../router/nav'
+    export default {
+        data() {
+            return {
+                nav: []
+            }
+        },
+        mounted() {
+            this.nav = NAV_METADATA
+        }
 
+    }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scope>
@@ -28,6 +49,13 @@
             border-right 7px solid $default-lignt
             background $base-white
             boxShadow()
+            padding 10px
+            .h1
+                font-size 18px
+                .h2
+                    font-size 14px
+                    .h3
+                        font-size 12px
         .detail
             flex 1
             background $base-white
