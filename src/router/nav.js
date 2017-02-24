@@ -1,55 +1,55 @@
 export const NAV_METADATA = [
   {
     label: '开发指南',
-    route: 'devhelp',
+    name: 'devhelp',
     child: [
       {
         label: '起步',
-        route: 'start'
+        name: 'start'
       },
       {
         label: '全局css样式',
-        route: 'global'
+        name: 'global'
       }
     ]
   },
   {
     label: '更新日志',
-    route: 'devhelp'
+    name: 'devhelp'
   },
   {
     label: '组件',
-    route: 'component',
+    name: 'component',
     child: [
       {
         label: '基础组件',
-        route: 'basic',
+        name: 'basic',
         child: [
           {
             label: '按钮',
-            route: 'button'
+            name: 'button'
           },
           {
             label: '图标',
-            route: 'icon'
+            name: 'icon'
           }
         ]
       },
       {
         label: '表单组件',
-        route: 'form'
+        name: 'form'
       },
       {
         label: '视图组件',
-        route: 'view'
+        name: 'view'
       },
       {
         label: '导航组件',
-        route: 'nav'
+        name: 'nav'
       },
       {
         label: '其他组件',
-        route: 'other'
+        name: 'other'
       }
     ]
   }
