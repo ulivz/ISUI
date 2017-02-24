@@ -3,7 +3,7 @@ export default class RouterFactory {
     static create(collection) {
         for (var item of collection) {
             if (item.child) {
-                RouterFactory.map(item.child)
+                RouterFactory.create(item.child)
             } else {
                 console.log(item)
                 RouterFactory._router.push({
