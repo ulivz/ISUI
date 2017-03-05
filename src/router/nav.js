@@ -15,7 +15,7 @@ export const NAV_METADATA = [
   },
   {
     label: '更新日志',
-    name: 'devhelp'
+    name: 'update'
   },
   {
     label: '组件',

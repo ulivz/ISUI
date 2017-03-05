@@ -5,7 +5,6 @@
       <div>
         <h1 class="content-subhead">ISUI</h1>
         <post v-if="showPost" :postData="postData"></post>
-
       </div>
     </div>
   </div>

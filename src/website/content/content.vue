@@ -1,89 +1,87 @@
 <template>
-  <div class="content-wrapper">
-    <div class="sidebar">
-      <ul class="h1" v-for="h1 in nav">
-        <li @click="fold(h1)">{{ h1.label }}</li>
-        <ul v-if="h1.show" class="h2" v-for="h2 in h1.child" style="padding-left: 10px">
-          <li @click="fold(h2)">{{ h2.label }}</li>
-          <ul v-if="h2.show" class="h3" v-for="h3 in h2.child" style="padding-left: 10px">
-            <li>{{ h3.label}}</li>
-          </ul>
-        </ul>
-      </ul>
+    <div class="content-wrapper">
+        <input v-model="ct" type="checkbox" id="ct">
+        <div class="sidenav">
+            <tree :treeData="nav"></tree>
+        </div>
+        <section>
+            <label for="ct">
+                <i class="icon iconfont icon-more"></i>
+            </label>
+            <md></md>
+        </section>
     </div>
-    <div class="detail"></div>
-  </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import { NAV_METADATA } from '../../router/nav'
-  import Vue from 'vue'
-  export default {
-    data() {
-      return {
-        nav: []
-      }
-    },
-    methods: {
-      fold(foldObject) {
-        if (!foldObject.show) {
-          console.log('1')
-          Vue.set(foldObject, 'show', true)
-        } else {
-          foldObject.show = false
+    import {NAV_METADATA} from '../../router/nav'
+    import tree from '../tree/tree.vue'
+    import md from '../markdown/md'
+    export default {
+        data() {
+            return {
+                nav: [],
+                ct: true
+            }
+        },
+        methods: {
+            foldSidebar() {
+                this.isSidebarShow = !this.isSidebarShow
+            }
+        },
+        mounted() {
+            this.nav = NAV_METADATA
+        },
+        components: {
+            tree,
+            md
         }
-      }
-    },
-    mounted() {
-      this.nav = NAV_METADATA
     }
-
-  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scope>
-  @import "../../common/stylus/index.styl"
-  .content-wrapper
-    display flex
-    position absolute
-    width 100%
-    padding 15px
-    box-sizing border-box
-    z-index -1
-    top 50px
-    bottom 0px
-    bg-defalut-light()
-    .sidebar
-      flex 0 0 150px
-      width 150px
-      border-radius 6px 0 0 6px
-      border-right 1px solid $default-lignt
-      background $base-white
-      boxShadow()
-      padding-left 20px
-      .h1
-        cursor pointer
-        font-size 12px
-        li
-          display block
-          height 42px
-          line-height 42px
-        .h2
-          font-size 14px
-          li
-            display block
-            height 42px
-            line-height 42px
-          .h3
-            font-size 12px
-            li
-              display block
-              height 42px
-              line-height 42px
-    .detail
-      flex 1
-      background $base-white
-      border-radius 0 6px 6px 0
-      boxShadow()
+    @import "../../common/stylus/index.styl"
+    @import "../pageConfig.styl"
+    
+    .content-wrapper
+        #ct
+            display none
+            &:checked ~ section
+                transform translateX($sidebar-width)
+                transform-origin 0% 50%
+            &:checked ~ section label:before
+                content: "收起"
+            &:checked ~ section label i
+                display inline-block
+                transform rotate(180deg)
+        .sidenav
+            background $base-sidebar
+            width $sidebar-width
+            position absolute
+            left 0
+            top $header-height
+            bottom 0
+        section
+            background: #fff;
+            width 100%
+            position: absolute;
+            top $header-height
+            bottom 0
+            transition: all 0.3s;
+            label
+                position absolute
+                left 10px
+                top 10px
+                color #777
+                font-size 12px
+                &:before
+                    content: '展开'
+                i
+                    font-size 12px
+
+    //    ddd
+
+
+
 </style>
-ß
+
