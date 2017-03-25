@@ -1,5 +1,5 @@
-.@{row-prefix-cls} {
-    .make-row();
+.{$row-prefix-cls} {
+    $make-row();
     display: block;
 
     &-flex {
@@ -43,46 +43,45 @@
         &-bottom {
             align-items: flex-end;
         }
-    };
+    }
 }
 
-.@{col-prefix-cls} {
+.{$col-prefix-cls} {
     position: relative;
     display: block;
 }
 
-.make-grid();
+$make-grid();
 
 // Extra small grid
 //
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-.make-grid(-xs);
+$make-grid(-xs);
 
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
 
-@media (min-width: @screen-sm-min) {
-    .make-grid(-sm);
-}
+@media (min-width: $screen-sm-min)
+    $make-grid(-sm)
+
 
 
 // Medium grid
 //
 // Columns, offsets, pushes, and pulls for the desktop device range.
 
-@media (min-width: @screen-md-min) {
-    .make-grid(-md);
-}
+@media (min-width: $screen-md-min)
+    $make-grid(-md)
+
 
 
 // Large grid
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 
-@media (min-width: @screen-lg-min) {
-    .make-grid(-lg);
-}
+@media (min-width: $screen-lg-min)
+    .make-grid(-lg)
