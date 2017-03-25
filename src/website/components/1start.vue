@@ -13,4 +13,5 @@
 
   .start
     color $rate-star-color
+    $make-motion(aaa, bbb)
 </style>
