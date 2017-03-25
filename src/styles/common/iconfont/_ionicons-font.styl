@@ -2,8 +2,8 @@
 // --------------------------
 
 @font-face {
- font-family: @ionicons-font-family;
- src:url("@{ionicons-font-path}/ionicons.eot?v=@{ionicons-version}");
+ font-family: $ionicons-font-family;
+ src:url($ionicons-font-path + /ionicons.eot?v=@{ionicons-version}');
  src:url("@{ionicons-font-path}/ionicons.eot?v=@{ionicons-version}#iefix") format("embedded-opentype"),
   url("@{ionicons-font-path}/ionicons.ttf?v=@{ionicons-version}") format("truetype"),
   url("@{ionicons-font-path}/ionicons.woff?v=@{ionicons-version}") format("woff"),
@@ -14,7 +14,7 @@
 
 .ivu-icon() {
     display: inline-block;
-    font-family: @ionicons-font-family;
+    font-family: $ionicons-font-family;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -27,5 +27,5 @@
 }
 
 .ivu-icon {
-    .ivu-icon();
+    $ivu-icon();
 }
