@@ -1,4 +1,4 @@
-@import "normalize";
+@import "normalize.styl";
 
 * {
     box-sizing: border-box;
@@ -11,11 +11,11 @@
 }
 
 body {
-    font-family: @font-family;
-    font-size: @font-size-small;
-    line-height: @line-height-base;
-    color: @text-color;
-    background-color: @body-background;
+    font-family: $font-family;
+    font-size: $font-size-small;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $body-background;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,19 +41,19 @@ input::-ms-clear, input::-ms-reveal {
 }
 
 a {
-    color: @link-color;
+    color: $link-color;
     background: transparent;
     text-decoration: none;
     outline: none;
     cursor: pointer;
-    transition: color @transition-time ease;
+    transition: color $transition-time ease;
 
     &:hover {
-        color: @link-hover-color;
+        color: $link-hover-color;
     }
 
     &:active {
-        color: @link-active-color;
+        color: $link-active-color;
     }
 
     &:active,
@@ -64,7 +64,7 @@ a {
 
     &[disabled] {
         color: #ccc;
-        cursor: @cursor-disabled;
+        cursor: $cursor-disabled;
         pointer-events: none;
     }
 }
@@ -73,5 +73,5 @@ code,
 kbd,
 pre,
 samp {
-    font-family: @code-family;
+    font-family: $code-family;
 }
