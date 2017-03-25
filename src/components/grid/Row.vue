@@ -1,12 +1,13 @@
 <template>
-  <div class="isui-row"></div>
+  <div class="iu-row"></div>
 </template>
 
 <script type="text/ecmascript-6">
+  exp
 
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .isui-row
+  .iu-row
     width 100%
 </style>
