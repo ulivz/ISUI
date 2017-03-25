@@ -11,14 +11,14 @@ $make-motion($className, $keyframeName)
     $motion-common()
     //animation-play-state paused
   .{$className}-enter-active
-    animation-name $keyframeName+ '-in'
+    animation-name $keyframeName+ 'In'
     //animation-play-state running
   .{$className}-leave-active
-    animation-name $keyframeName+ '-out'
+    animation-name $keyframeName+ 'Out'
     //animation-play-state running
 
 
 @import "fade.styl";
 @import "move.styl";
-//@import "ease.styl";
+@import "ease.styl";
 //@import "slide.styl";

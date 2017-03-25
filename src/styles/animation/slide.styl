@@ -9,10 +9,10 @@ $slide-motion(className, keyframeName) {
     }
 }
 
-$slide-motion(slide-up, {$css-prefix}SlideUp);
-$slide-motion(slide-down, {$css-prefix}SlideDown);
-$slide-motion(slide-left, {$css-prefix}SlideLeft);
-$slide-motion(slide-right, {$css-prefix}SlideRight);
+$slide-motion(slide-up, $css-prefix + 'SlideUp');
+$slide-motion(slide-down, $css-prefix + 'SlideDown');
+$slide-motion(slide-left, $css-prefix + 'SlideLeft');
+$slide-motion(slide-right, $css-prefix + 'SlideRight');
 
 @keyframes {$css-prefix}SlideUpIn {
     0% {

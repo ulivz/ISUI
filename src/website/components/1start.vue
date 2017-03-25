@@ -1,5 +1,5 @@
 <template>
-      <transition name="fade">
+      <transition name="ease">
         <div class="start">
           <div class="block">123</div>
         </div>
