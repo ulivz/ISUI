@@ -14,7 +14,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import {NAV_METADATA} from '../../router/nav'
+    import {NAV_METADATA} from '../router/nav'
     import tree from '../tree/tree.vue'
 //    import md from '../markdown/md'
     export default {
@@ -39,9 +39,9 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scope>
-    @import "../../common/stylus/index.styl"
+    @import "../../stylus/index.styl"
     @import "../pageConfig.styl"
-    
+
     .content-wrapper
         #ct
             display none

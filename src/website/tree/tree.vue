@@ -33,7 +33,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scope>
-    @import "../../common/stylus/index.styl"
+    @import "../../stylus/index.styl"
     $indent = 20px
     $height = 42px
     .tree

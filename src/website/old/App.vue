@@ -11,8 +11,8 @@
 </template>
 
 <script>
-  import navigator from './website/old/navigator.vue'
-  import post from './website/old/post.vue'
+  import navigator from './navigator.vue'
+  import post from './post.vue'
   export default {
     name: 'app',
     data() {
