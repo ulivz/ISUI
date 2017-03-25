@@ -1,7 +1,9 @@
 <template>
     <div class="isui">
         <su-header></su-header>
-        <su-content></su-content>
+        <su-content>
+          <router-view></router-view>
+        </su-content>
     </div>
 </template>
 

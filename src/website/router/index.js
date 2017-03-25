@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import RouterFactory from './RouterFactory'
-import { NAV_METADATA } from './nav'
+import { NAV_METADATA } from './NAV_METADATA'
 
 let router = RouterFactory.create(NAV_METADATA)
 

@@ -8,12 +8,13 @@
             <label for="ct">
                 <i class="icon iconfont icon-more"></i>
             </label>
+            <slot></slot>
         </section>
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-    import {NAV_METADATA} from '../router/nav'
+    import {NAV_METADATA} from '../router/NAV_METADATA'
     import tree from '../tree/tree.vue'
 //    import md from '../markdown/md'
     export default {

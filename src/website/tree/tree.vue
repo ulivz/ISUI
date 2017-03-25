@@ -20,9 +20,7 @@
         },
         methods: {
             fold(foldObject) {
-                console.log('1')
                 if (!foldObject.show) {
-                    console.log('1')
                     Vue.set(foldObject, 'show', true)
                 } else {
                     foldObject.show = false
