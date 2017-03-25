@@ -8,7 +8,9 @@
             <label for="ct">
                 <i class="icon iconfont icon-more"></i>
             </label>
-            <slot></slot>
+            <div class="iu-router-view">
+              <router-view></router-view>
+            </div>
         </section>
     </div>
 </template>
@@ -77,6 +79,8 @@
                     content: '展开'
                 i
                     font-size 12px
+            .iu-router-view
+              padding 40px 20px 0 20px
 
     //    ddd
 
