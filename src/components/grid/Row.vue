@@ -1,10 +1,11 @@
 <template>
-  <div class="iu-row"></div>
+  <div class="iu-row">
+    <slot></slot>
+  </div>
 </template>
 
 <script type="text/ecmascript-6">
-  exp
-
+  import
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
