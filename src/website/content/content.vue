@@ -16,7 +16,7 @@
 <script type="text/ecmascript-6">
     import {NAV_METADATA} from '../../router/nav'
     import tree from '../tree/tree.vue'
-    import md from '../markdown/md'
+//    import md from '../markdown/md'
     export default {
         data() {
             return {
@@ -33,8 +33,7 @@
             this.nav = NAV_METADATA
         },
         components: {
-            tree,
-            md
+            tree
         }
     }
 </script>
@@ -62,12 +61,12 @@
             top $header-height
             bottom 0
         section
-            background: #fff;
+            background #fff
             width 100%
-            position: absolute;
+            position absolute
             top $header-height
             bottom 0
-            transition: all 0.3s;
+            transition all 0.3s
             label
                 position absolute
                 left 10px
