@@ -8,7 +8,6 @@
             <label for="ct">
                 <i class="icon iconfont icon-more"></i>
             </label>
-            <md></md>
         </section>
     </div>
 </template>

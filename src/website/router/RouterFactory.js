@@ -1,5 +1,5 @@
-import start from '../components/1.start.vue'
-import global from '../components/2.global.vue'
+import start from '../components/1start.vue'
+import global from '../components/2global.vue'
 
 const components = [
   start,
@@ -11,7 +11,6 @@ export default class RouterFactory {
 
   static findComponent(name) {
     for (var component of components) {
-      console.log(component)
       if (component.name === name) {
         return component
       }
@@ -26,7 +25,6 @@ export default class RouterFactory {
         self.create(item.child)
       } else {
         let component = self.findComponent(item.name)
-        console.log(item.name)
         if (component) {
           self._router.push({
             path: `/${item.name}`,
