@@ -1,16 +1,16 @@
 $fade-motion($className, $keyframeName)
     $make-motion($className, $keyframeName);
-    .{$className}-enter-active, .{$className}-appear
+    .{$className}-enter-active
         opacity: 0;
         animation-timing-function linear
 
     .{$className}-leave-active
         animation-timing-function linear
 
-$fade-motion(fade, $css-prefix+'Fade');
+$fade-motion(fade, $css-prefix+'fade');
 
 
-@keyframes {$css-prefix}FadeIn {
+@keyframes {$css-prefix}fade-in {
   0% {
     opacity: 0;
   }
@@ -19,7 +19,7 @@ $fade-motion(fade, $css-prefix+'Fade');
   }
 }
 
-@keyframes {$css-prefix}FadeOut {
+@keyframes {$css-prefix}fade-out {
   0% {
     opacity: 1;
   }

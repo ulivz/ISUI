@@ -4,18 +4,18 @@ $motion-common()
 
 
 $make-motion($className, $keyframeName)
-  .{$className}-enter-active, .{$className}-appear
+  .{$className}-enter-active
     $motion-common()
-    animation-play-state paused
+    //animation-play-state paused
   .{$className}-leave-active
     $motion-common()
-    animation-play-state paused
-  .{$className}-enter-active, .{$className}-appear
-    animation-name $className+'-appear'
-    animation-play-state running
+    //animation-play-state paused
+  .{$className}-enter-active
+    animation-name $keyframeName+ '-in'
+    //animation-play-state running
   .{$className}-leave-active
-    animation-name $keyframeName+'Out'
-    animation-play-state running
+    animation-name $keyframeName+ '-out'
+    //animation-play-state running
 
 
 @import "fade.styl";

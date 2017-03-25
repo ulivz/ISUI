@@ -1,5 +1,9 @@
 <template>
-    <div class="start">开始</div>
+      <transition name="fade">
+        <div class="start">
+          123
+        </div>
+      </transition>
 </template>
 
 <script type="text/ecmascript-6">
@@ -13,5 +17,4 @@
 
   .start
     color $rate-star-color
-    $make-motion(aaa, bbb)
 </style>
