@@ -7,22 +7,23 @@ $fade-motion($className, $keyframeName)
     .{$className}-leave-active
         animation-timing-function linear
 
-$fade-motion(fade, {$css-prefix}Fade);
+$fade-motion(fade, $css-prefix+'Fade');
+
 
 @keyframes {$css-prefix}FadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes {$css-prefix}FadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
