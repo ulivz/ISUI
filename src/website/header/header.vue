@@ -11,7 +11,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scope>
-    @import "../../stylus/index.styl"
+    @import "../../styles/index.styl"
     @import "../pageConfig.styl"
     .su-header
         color: #fff
