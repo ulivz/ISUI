@@ -14,6 +14,10 @@ export const NAV_METADATA = [
       {
         label: 'Color',
         name: 'color'
+      },
+      {
+        label: 'Grid',
+        name: 'grid'
       }
     ]
   },
