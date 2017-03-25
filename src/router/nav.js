@@ -10,6 +10,10 @@ export const NAV_METADATA = [
       {
         label: '全局css样式',
         name: 'global'
+      },
+      {
+        label: 'Color',
+        name: 'color'
       }
     ]
   },
