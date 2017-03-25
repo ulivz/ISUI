@@ -1,7 +1,7 @@
 <template>
       <transition name="fade">
         <div class="start">
-          123
+          <div class="block">123</div>
         </div>
       </transition>
 </template>
@@ -17,4 +17,8 @@
 
   .start
     color $rate-star-color
+    .block
+      width 100px
+      height 100px
+      background $base-dark
 </style>
