@@ -21,5 +21,6 @@
       width 100px
       height 100px
       background $base-dark
+      $row-prefix-cls()
 
 </style>

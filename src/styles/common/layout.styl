@@ -1,4 +1,4 @@
-.{$row-prefix-cls} {
+$row-prefix-cls() {
     $make-row()
     display: block
 
@@ -46,7 +46,7 @@
     }
 }
 
-.{$col-prefix-cls} {
+$col-prefix-cls() {
     position: relative
     display: block
 }
@@ -54,14 +54,14 @@
 $make-grid()
 
 // Extra small grid
-//
+
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
 $make-grid(-xs)
 
 // Small grid
-//
+
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
 
@@ -71,7 +71,7 @@ $make-grid(-xs)
 
 
 // Medium grid
-//
+
 // Columns, offsets, pushes, and pulls for the desktop device range.
 
 @media (min-width: $screen-md-min)
