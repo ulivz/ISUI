@@ -1,13 +1,13 @@
-@row-prefix-cls: ~"@{css-prefix}row";
-@col-prefix-cls: ~"@{css-prefix}col";
+$row-prefix-cls= ~{$css-prefix}row
+$col-prefix-cls= ~{$css-prefix}col
 
-.make-row(@gutter: @grid-gutter-width) {
-    position: relative;
-    margin-left: (@gutter / -2);
-    margin-right: (@gutter / -2);
-    height: auto;
-    .clearfix;
-}
+.make-row($gutter = $grid-gutter-width)
+    position relative;
+    margin-left ($gutter / -2);
+    margin-right ($gutter / -2);
+    height: auto
+    $clearfix()
+
 
 .float-grid-columns(@class) {
     .col(@index) { // initial
