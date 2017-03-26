@@ -13,12 +13,12 @@ $float-grid-columns($class){
 
   $col($index){ // initial
 
-    $item = '.'$col-prefix-cls'-span'$class'-'$index
+    $item = '$'$col-prefix-cls'-span'$class'-'$index
     $_col(($index + 1), $item)
 
     if ($index >= $grid-columns) { // general
       $_col($index, $list) {
-        $_col((@index + 1), $list', '$item)
+        $_col(($index + 1), $list', '$item)
       }
     }
 
@@ -38,40 +38,47 @@ $float-grid-columns($class){
 }
 
 
+$loop-grid-columns($index, $class) {
 
-//.loop-grid-columns(@index, @class) when (@index > 0) {
-//    .@{col-prefix-cls}-span@{class}-@{index} {
-//        display: block;
-//        width: percentage((@index / @grid-columns));
-//    }
-//    .@{col-prefix-cls}@{class}-push-@{index} {
-//        left: percentage((@index / @grid-columns));
-//    }
-//    .@{col-prefix-cls}@{class}-pull-@{index} {
-//        right: percentage((@index / @grid-columns));
-//    }
-//    .@{col-prefix-cls}@{class}-offset-@{index} {
-//        margin-left: percentage((@index / @grid-columns));
-//    }
-//    .@{col-prefix-cls}@{class}-order-@{index} {
-//        order: @index;
-//    }
-//    .loop-grid-columns((@index - 1), @class);
-//}
-//
-//.loop-grid-columns(@index, @class) when (@index = 0) {
-//    .@{col-prefix-cls}-span@{class}-@{index} {
-//        display: none;
-//    }
-//    .@{col-prefix-cls}@{class}-push-@{index} {
-//        left: auto;
-//    }
-//    .@{col-prefix-cls}@{class}-pull-@{index} {
-//        right: auto;
-//    }
-//}
-//
-//.make-grid(@class: ~'') {
-//    .float-grid-columns(@class);
-//    .loop-grid-columns(@grid-columns, @class);
-//}
+  if ($index > 0) {
+
+    .{$col-prefix-cls}-span{$class}-{$index} {
+      display: block
+      width: percentage(($index / $grid-columns))
+    }
+    .{$col-prefix-cls}{$class}-push-{$index} {
+      left: percentage(($index / $grid-columns))
+    }
+    .{$col-prefix-cls}{$class}-pull-{$index} {
+      right: percentage(($index / $grid-columns))
+    }
+    .{$col-prefix-cls}{$class}-offset-{$index} {
+      margin-left: percentage(($index / $grid-columns))
+    }
+    .{$col-prefix-cls}{$class}-order-{$index} {
+      order: $index
+    }
+    $loop-grid-columns(($index - 1), $class)
+
+  }
+
+  else if ($index == 0) {
+
+    .{$col-prefix-cls}-span{$class}-{$index} {
+        display: none
+    }
+    .{$col-prefix-cls}{$class}-push-{$index} {
+      left: auto
+    }
+    .{$col-prefix-cls}{$class}-pull-{$index} {
+      right: auto
+    }
+
+  }
+}
+
+
+$make-grid($class = '') {
+    $float-grid-columns($class)
+    $loop-grid-columns($grid-columns, $class)
+}

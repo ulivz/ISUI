@@ -1,9 +1,9 @@
 <template>
-      <transition name="ease">
+      <!--<transition name="ease">-->
         <div class="start">
           <div class="block">123</div>
         </div>
-      </transition>
+      <!--</transition>-->
 </template>
 
 <script type="text/ecmascript-6">
