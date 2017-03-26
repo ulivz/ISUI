@@ -1,64 +1,64 @@
 .{$row-prefix-cls} {
-    //$make-row();
-    display: block;
+    $make-row()
+    display: block
 
     &-flex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
 
         &:before,
         &:after {
-            display: flex;
+            display: flex
         }
         // x轴原点
         &-start {
-            justify-content: flex-start;
+            justify-content: flex-start
         }
         // x轴居中
         &-center {
-            justify-content: center;
+            justify-content: center
         }
         // x轴反方向
         &-end {
-            justify-content: flex-end;
+            justify-content: flex-end
         }
         // x轴平分
         &-space-between {
-            justify-content: space-between;
+            justify-content: space-between
         }
         // x轴有间隔地平分
         &-space-around {
-            justify-content: space-around;
+            justify-content: space-around
         }
         // 顶部对齐
         &-top {
-            align-items: flex-start;
+            align-items: flex-start
         }
         // 居中对齐
         &-middle {
-            align-items: center;
+            align-items: center
         }
         // 底部对齐
         &-bottom {
-            align-items: flex-end;
+            align-items: flex-end
         }
     }
 }
 
 .{$col-prefix-cls} {
-    position: relative;
-    display: block;
+    position: relative
+    display: block
 }
 
-$make-grid();
+$make-grid()
 
 // Extra small grid
 //
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
 
-$make-grid(-xs);
+$make-grid(-xs)
 
 // Small grid
 //
@@ -84,4 +84,4 @@ $make-grid(-xs);
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 
 @media (min-width: $screen-lg-min)
-    .make-grid(-lg)
+    $make-grid(-lg)

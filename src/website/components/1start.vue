@@ -21,5 +21,5 @@
       width 100px
       height 100px
       background $base-dark
-      $float-grid-columns(ddd)
+
 </style>
