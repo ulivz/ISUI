@@ -13,23 +13,25 @@ $float-grid-columns($class){
 
   $col($index){ // initial
 
-    $item = '$'$col-prefix-cls'-span'$class'-'$index
-    $_col(($index + 1), $item)
-
-    if ($index >= $grid-columns) { // general
+    if ($index <= $grid-columns) { // general
       $_col($index, $list) {
         $_col(($index + 1), $list', '$item)
       }
     }
 
-    else{   // terminal
+    else if ($index > $grid-columns) {   // terminal
       $_col($index, $list){
-        $list(){
+        $list {
           float: left
           flex: 0 0 auto
         }
       }
     }
+
+    $item = '$'$col-prefix-cls'-span'$class'-'$index
+    $_col(($index + 1), $item)
+
+
 
     $col(1) // kickstart it
 
