@@ -2,7 +2,9 @@
       <!--<transition name="ease">-->
         <div class="start">
           <div class="block">123</div>
-          <Row>
+          <Row >
+            <i-col span="12">1312321</i-col>
+            <i-col span="12">1312321</i-col>
             <i-col span="12">1312321</i-col>
           </Row>
         </div>
@@ -31,6 +33,4 @@
       width 100px
       height 100px
       background $base-dark
-      $row-prefix-cls()
-
 </style>

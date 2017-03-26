@@ -3,8 +3,8 @@ $col-prefix-cls = $css-prefix + 'col'
 
 $make-row($gutter = $grid-gutter-width){
   position relative
-  margin-left $gutter / -2
-  margin-right $gutter / -2
+  margin-left floor($gutter / -2)
+  margin-right floor($gutter / -2)
   height: auto
   $clearfix()
 }
