@@ -1,5 +1,5 @@
 <template>
-  <div class="iu-row">
+  <div :class="classes" :style="styles">
     <slot></slot>
   </div>
 </template>
