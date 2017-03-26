@@ -9,35 +9,30 @@ $make-row($gutter = $grid-gutter-width){
   $clearfix()
 }
 
-$float-grid-columns($class){
+$DOT = '.'
+$SEP = '-'
 
-  $col($index){ // initial
+$float-grid-columns(class = '') {
 
-    if ($index <= $grid-columns) { // general
-      $_col($index, $list) {
-        $_col(($index + 1), $list', '$item)
-      }
+  Col(index, list = '')
+
+  _item = $DOT + $col-prefix-cls + span + class + $SEP + index
+
+  if (index <= $grid-columns) {
+    Col((index + 1), list + ',' + _item)
+
+  } else if (index > $grid-columns) {
+    {list} {
+      float left
+      flex 0 0 auto
     }
-
-    else if ($index > $grid-columns) {   // terminal
-      $_col($index, $list){
-        $list {
-          float: left
-          flex: 0 0 auto
-        }
-      }
-    }
-
-    $item = '$'$col-prefix-cls'-span'$class'-'$index
-    $_col(($index + 1), $item)
-
-
-
-    $col(1) // kickstart it
-
   }
 
+  Col(1)
+
 }
+
+
 
 
 $loop-grid-columns($index, $class) {
@@ -67,7 +62,7 @@ $loop-grid-columns($index, $class) {
   else if ($index == 0) {
 
     .{$col-prefix-cls}-span{$class}-{$index} {
-        display: none
+       display: none
     }
     .{$col-prefix-cls}{$class}-push-{$index} {
       left: auto
