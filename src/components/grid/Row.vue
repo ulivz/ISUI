@@ -8,23 +8,23 @@
 
   import {isContain} from '../../utils/handle/collection.js'
 
-  const classPrefix = 'isui-row';
+  const classPrefix = 'isui-row'
 
   export default {
     name: 'Row',
     props: {
       type: {
-        validator(value){
+        validator(value) {
           return isContain(value, ['flex'])
         },
         align: {
           validator (value) {
-            return isContain(value, ['top', 'middle', 'bottom']);
+            return isContain(value, ['top', 'middle', 'bottom'])
           }
         },
         justify: {
           validator (value) {
-            return isContain(value, ['start', 'end', 'center', 'space-around', 'space-between']);
+            return isContain(value, ['start', 'end', 'center', 'space-around', 'space-between'])
           }
         },
         gutter: {
@@ -44,40 +44,38 @@
             [`${classPrefix}-${this.type}-${this.justify}`]: !!this.justify,
             [`${this.className}`]: !!this.className
           }
-        ];
+        ]
       },
       styles () {
-        let style = {};
+        let style = {}
         if (this.gutter !== 0) {
           style = {
             marginLeft: this.gutter / -2 + 'px',
             marginRight: this.gutter / -2 + 'px'
-          };
+          }
         }
-        return style;
+        return style
       }
     },
     methods: {
       updateGutter (val) {
         this.$children.forEach((child) => {
           if (val !== 0) {
-            child.gutter = val;
+            child.gutter = val
           }
-        });
+        })
       }
     },
     watch: {
       gutter (val) {
-        this.updateGutter(val);
+        this.updateGutter(val)
       }
     },
     mounted () {
-      this.updateGutter(this.gutter);
+      this.updateGutter(this.gutter)
     }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .iu-row
-    width 100%
 </style>

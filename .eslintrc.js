@@ -27,7 +27,12 @@ module.exports = {
     'indent': 0,
     // 忽略掉函数括号前的空格检查
     'space-before-function-paren': 0,
-    
-    'key-spacing': 0
+
+    'key-spacing': 0,
+
+    'no-unexpected-multiline': 0,
+
+    'no-sequences': 0,
+    'semi': 0
   }
 }
