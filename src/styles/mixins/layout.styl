@@ -12,27 +12,23 @@ $make-row($gutter = $grid-gutter-width){
 $DOT = '.'
 $SEP = '-'
 
-$float-grid-columns(class = '') {
+$float-grid-columns(class = '')
 
   Col(index, list = '')
 
-  _item = $DOT + $col-prefix-cls + span + class + $SEP + index
+    _item = $DOT + $col-prefix-cls + $SEP + span + class + $SEP + index
 
-  if (index <= $grid-columns) {
-    Col((index + 1), list + ',' + _item)
+    if (index <= $grid-columns) {
+      Col((index + 1), list + ',' + _item)
 
-  } else if (index > $grid-columns) {
-    {list} {
-      float left
-      flex 0 0 auto
+    } else if (index > $grid-columns) {
+      {list} {
+        float left
+        flex 0 0 auto
+      }
     }
-  }
 
   Col(1)
-
-}
-
-
 
 
 $loop-grid-columns($index, $class) {
