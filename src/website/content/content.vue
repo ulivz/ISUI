@@ -45,6 +45,7 @@
   @import "../pageConfig.styl"
 
   .content-wrapper
+    flex 1
     top $header-height
     position relative
     display flex
@@ -63,7 +64,9 @@
       &:checked ~ section label i
         display inline-block
         transform rotate(180deg)
+
     .sidenav
+      height 100%
       transition all 0.5s
       background $base-sidebar
       width $sidebar-width

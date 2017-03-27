@@ -18,6 +18,7 @@
         background: $base-white
         height $header-height
         width 100%
+        flex 0 0 $header-height
         position fixed
         left 0
         top 0
