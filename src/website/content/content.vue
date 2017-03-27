@@ -45,7 +45,6 @@
   @import "../pageConfig.styl"
 
   .content-wrapper
-    flex 1
     top $header-height
     position relative
     display flex
